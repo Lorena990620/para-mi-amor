@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi primera web</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      h1 {
+        color: #ff0066;
+      }
+      button {
+        background-color: #0066;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+  background-color: #00cc66; /* Color verde al pasar el cursor */
+}
+    </style>
+  </head>
+  <body>
+    <h1>¡Hola, papi 🔥🤭!</h1>
+    <p>Esta es mi primera página web.</p>
+    <button id="miBoton">Haz clic aquí</button>
+
+    <script>
+    const boton = document.getElementById("miBoton");
+const textoOriginal = boton.textContent; // Guardamos el texto original
+const colorOriginal = boton.style.backgroundColor; // Guardamos el color original
+
+boton.addEventListener("click", () => {
+  alert("Te Amo 🥰");
+  boton.textContent = "No sé que poner jajaja"; // Cambia el texto al hacer clic
+  boton.style.backgroundColor = "#ffcc00"; // Cambia el color al hacer clic
+});
+
+// Volver al texto y color original al pasar el cursor
+boton.addEventListener("mouseenter", () => {
+  boton.textContent = textoOriginal;
+  boton.style.backgroundColor = colorOriginal;
+});
+    </script>
+  </body>
+</html>
